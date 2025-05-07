@@ -33,13 +33,12 @@ func main() {
 	// var age int
 
 	// fmt.Print("Enter your name and age:")
-	// fmt.Scan(&name, &age)
-	// fmt.Scanln(&name, &age)
-	// fmt.Scanf("%s %d", &name, &age)
+	// fmt.Scan(&name, &age) // take input spearated by " "
+	// fmt.Scanln(&name, &age) // accepts input only in 1 line, if we press enter, default values are assigned to rest
+	// fmt.Scanf("%s %d", &name, &age) // accepst input as mentioned in function
 	// fmt.Printf("Name: %s, Age: %d\n", name, age)
 
 	// Error Formatting Functions
-
 	err := checkAge(19)
 	if err != nil {
 		fmt.Println("Error: ", err)
