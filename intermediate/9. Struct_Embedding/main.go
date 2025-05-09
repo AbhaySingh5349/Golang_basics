@@ -13,7 +13,7 @@ type person struct {
 // fileds of embedded struct are promoted to outer struct
 
 type Employee1 struct {
-	person // Embedded struct Named field
+	person // Anonymous field
 	empId  string
 	salary float64
 }
@@ -28,6 +28,7 @@ func (p person) introduce() {
 	fmt.Printf("Hi, I'm %s and I'm %d years old.\n", p.name, p.age)
 }
 
+// methods can be over-ridden by redefining them in outer struct
 func (e Employee1) introduce() {
 	fmt.Printf("Hi, I'm %s, employee ID: %s, and I earn %.2f.\n", e.name, e.empId, e.salary)
 }
@@ -49,7 +50,7 @@ func main() {
 	fmt.Println("Emp ID:", emp1.empId)
 	fmt.Println("Salary:", emp1.salary)
 
-	emp1.introduce()
+	emp1.introduce() // over-riding "introduce" method of "person"
 
 	fmt.Print("\n****************************************\n")
 
