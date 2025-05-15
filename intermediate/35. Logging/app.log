@@ -1,0 +1,4 @@
+DEBUG: 2025/05/15 19:07:48 main.go:41: This is a debug message.
+WARN: 2025/05/15 19:07:48 This is a warning message.
+INFO: 2025/05/15 19:07:48 main.go:43: This is an info mesage.
+ERROR: 2025/05/15 19:07:48 main.go:44: This is an error.
