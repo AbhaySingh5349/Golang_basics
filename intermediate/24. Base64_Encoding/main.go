@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+// Base64 encoding converts "binary data" to "text format" making it suitable to transfer via text-based protocols
+
 func main() {
 
 	data := []byte("He~lo, Base64 Encoding")
