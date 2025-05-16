@@ -7,6 +7,7 @@ import (
 
 // Goroutines are just functions that leave main thread and run in background and come back to join main thread once functions are finished/ready to return any value
 // Goroutines do not stop the program flow and are non blocking
+// Goriutine ~ Thread
 // similar to async/await in JS
 
 func sayHello() {
