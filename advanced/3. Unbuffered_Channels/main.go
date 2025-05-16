@@ -8,11 +8,6 @@ import (
 // by default channels are unbuffered i.e no storage
 // unbuffered channels need immediate receiver, so we send values in separate goroutine & keep receiver in different goroutine
 
-// buffereing let's channel to hold limited num of values before "blocking sender"
-// buffered channels are useful for managing data flow & concurrency
-// buffered channels allow "async communication" i.e it allows "senders" to continue working without blocking untill buffer is full
-// with help of Load Balancers, they manage data transfer between producer & consumer
-
 func main() {
 	ch := make(chan int)
 
