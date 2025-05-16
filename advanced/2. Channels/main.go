@@ -6,6 +6,7 @@ import (
 
 // channels are way to communicate within goroutines, we cannot make channel work in our "any func without goroutine"
 // unlike goroutines, "channels" are blocking in nature
+// channel wait for goroutine to finish & as soon as it receives it's value, it will let execution flow to move to next line
 
 func main() {
 
@@ -14,6 +15,7 @@ func main() {
 	greeting := make(chan string)
 	greetString := "Hello"
 
+	// creating goroutine to send data into unbuffered channel
 	go func() {
 		greeting <- greetString // blocking because it is continuously trying to receive values, it is ready to receive continuous flow of data.
 		greeting <- "World"
