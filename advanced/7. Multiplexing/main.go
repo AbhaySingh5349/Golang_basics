@@ -9,6 +9,7 @@ import (
 // "select statement" facilitates multipleplexing by allowing goroutine to wait on multiple channel operations & execute whichever operation is ready first
 // "select statement" enables non-blocking communication with channels i.e if non of channel operation is ready, "select" does not block execution of program
 // "select statement" also helps in preventing deadlocks
+// select statement waits for the first available channel to return
 
 // func main() {
 
