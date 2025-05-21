@@ -5,6 +5,8 @@ import (
 	"sort"
 )
 
+// to sort a custom struct, we must define 3 methods: Len, Less, Swap
+
 type Person struct {
 	Name string
 	Age  int
