@@ -51,8 +51,7 @@ type ticketRequest struct {
 func ticketProcessor(requests <-chan ticketRequest, results chan<- int) {
 	for req := range requests {
 		fmt.Printf("Processing %d ticket(s) of personID %d with total cost %d\n", req.numTickets, req.personID, req.cost)
-		// simulate processing time
-		time.Sleep(time.Second)
+		time.Sleep(time.Second) // simulate processing time
 		results <- req.personID
 	}
 
